@@ -134,7 +134,7 @@ An *output parameter* is used for output parameter passing. An output parameter 
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
-A *parameter array* permits a variable number of arguments to be passed to a method. A parameter array is declared with the `params` modifier. Only the last parameter of a method can be a parameter array, and the type of a parameter array must be a single-dimensional array type. The Write and WriteLine methods of the `@System.Console` class are good examples of parameter array usage. They are declared as follows.
+A *parameter array* permits a variable number of arguments to be passed to a method. A parameter array is declared with the `params` modifier. Only the last parameter of a method can be a parameter array, and the type of a parameter array must be a single-dimensional array type. The Write and WriteLine methods of the `System.Console` class are good examples of parameter array usage. They are declared as follows.
 
 [!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
@@ -196,7 +196,7 @@ The previous four classes can be used to model arithmetic expressions. For examp
 
 [!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
 
-The `Evaluate` method of an `Expression` instance is invoked to evaluate the given expression and produce a `double` value. The method takes as an argument a @`Dctionary` that contains variable names (as keys of the entries) and values (as values of the entries). The `Evaluate` method is a `virtual abstract` method, meaning that non-abstract derived classes must override it to provide an actual implementation.
+The `Evaluate` method of an `Expression` instance is invoked to evaluate the given expression and produce a `double` value. The method takes as an argument a `Dictionary` that contains variable names (as keys of the entries) and values (as values of the entries). The `Evaluate` method is a `virtual abstract` method, meaning that non-abstract derived classes must override it to provide an actual implementation.
 
 A `Constant`'s implementation of `Evaluate` simply returns the stored constant. A `VariableReference`'s implementation looks up the variable name in the dictionary and returns the resulting value. An `Operation`'s implementation first evaluates the left and right operands (by recursively invoking their `Evaluate` methods) and then performs the given arithmetic operation.
 
